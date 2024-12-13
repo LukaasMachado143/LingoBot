@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { AppService } from './app.service';
+import { ConversationGateway } from './conversation/conversation.gateway';
 
 @Module({
-  providers: [AppService],
+  providers: [ConversationGateway],
 })
 export class AppModule { }
