@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs23.x", 
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "optimize": {
+    "image": true,
+    "font": true
+  },
+  "regions": ["iad1", "cdg1"]
+}
